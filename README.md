@@ -39,9 +39,13 @@ rag_project/
    ```
 ## 🧪 Menjalankan Proyek
 
-```bash
-python app.py
-```
+openai@openai:~/rag_project$ python app.py 
+/home/openai/rag_project/app.py:18: LangChainDeprecationWarning: The class `HuggingFaceBgeEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embedding = HuggingFaceBgeEmbeddings(
+🔁 Sistem siap. Ketik pertanyaan (atau 'exit' untuk keluar)
+❓ Pertanyaan kamu: tangsel ada dimana
+🤖 Jawaban: Tangerang Selatan berada di Provinsi Banten, Indonesia.
+❓ Pertanyaan kamu: 
 
 Aplikasi akan memuat dokumen, melakukan chunking dan embedding, serta memungkinkan Anda mengajukan pertanyaan yang akan dijawab oleh LLM berdasarkan konten dokumen.
 
