@@ -1,21 +1,21 @@
-# 📚 RAG Chat – LangChain + Chroma + BGE + Ollama (Gemma 3)
+#  RAG Chat – LangChain + Chroma + BGE + Ollama (Gemma 3)
 
 Bangun **chatbot RAG** (Retrieval-Augmented Generation) yang hanya menjawab berdasarkan isi dokumen lokal Anda.
 Proyek ini memuat file teks, memotongnya jadi potongan (chunks), membuat **embedding** dengan **BGE**, menyimpannya ke **Chroma**, lalu melakukan tanya-jawab memakai **LLM lokal via Ollama** (contoh: `gemma3:12b`).
 
 ---
 
-## ✨ Fitur
+##  Fitur
 
-* 🔎 **Conversational Retrieval**: menjaga konteks percakapan dengan `chat_history`.
-* 🧠 **Akurasi lebih baik**: jawaban dibatasi pada isi dokumen (anti “ngarang”).
-* 💾 **Persisten**: vektor disimpan ke folder `./chroma_db`.
-* 🧩 **Mudah ganti model**: ubah embedding (BGE) atau LLM (Ollama) sesuai kebutuhan.
-* 🧪 **Sederhana dijalankan**: satu file Python, jalankan & tanya!
+*  **Conversational Retrieval**: menjaga konteks percakapan dengan `chat_history`.
+*  **Akurasi lebih baik**: jawaban dibatasi pada isi dokumen (anti “ngarang”).
+*  **Persisten**: vektor disimpan ke folder `./chroma_db`.
+*  **Mudah ganti model**: ubah embedding (BGE) atau LLM (Ollama) sesuai kebutuhan.
+*  **Sederhana dijalankan**: satu file Python, jalankan & tanya!
 
 ---
 
-## 🧱 Arsitektur (RAG alur sederhana)
+##  Arsitektur (RAG alur sederhana)
 
 ```mermaid
 flowchart TD
@@ -32,7 +32,7 @@ flowchart TD
 
 ---
 
-## 📂 Struktur Direktori (disarankan)
+##  Struktur Direktori (disarankan)
 
 ```
 .
@@ -47,7 +47,7 @@ flowchart TD
 
 ---
 
-## ✅ Prasyarat
+##  Prasyarat
 
 1. **Python 3.10+** dan **pip**
 
@@ -85,7 +85,7 @@ flowchart TD
 ---
 
 
-## ▶️ Menjalankan
+##  Menjalankan
 
 1. Pastikan **Ollama** aktif dan model sudah ditarik.
 2. Pastikan file **`docs/smartcity.txt`** tersedia.
@@ -105,7 +105,7 @@ Ketik `exit` untuk keluar.
 
 ---
 
-## 🔄 Mengganti Model
+##  Mengganti Model
 
 ### Mengganti **LLM** (Ollama)
 
@@ -144,7 +144,7 @@ rm -rf chroma_db
 
 ---
 
-## 🛠️ Tips & Praktik Baik
+##  Tips & Praktik Baik
 
 * **Kualitas dokumen**: bersihkan teks (hapus header/footer berulang, tanda baca aneh).
 * **Ukuran chunk**:
@@ -156,7 +156,7 @@ rm -rf chroma_db
 
 ---
 
-## ❓ FAQ
+##  FAQ
 
 **Q: “Jawabannya kosong atau ngawur.”**
 A:
@@ -186,7 +186,7 @@ Jalankan ulang skrip untuk membangun indeks baru.
 
 ---
 
-## 🧪 Contoh Pertanyaan
+##  Contoh Pertanyaan
 
 * “Sebutkan pilar smart city yang disebut dalam dokumen ini.”
 * “Apa rekomendasi arsitektur data untuk layanan perizinan?”
@@ -194,13 +194,13 @@ Jalankan ulang skrip untuk membangun indeks baru.
 
 ---
 
-## 📜 Lisensi
+##  Lisensi
 
 MIT — bebas digunakan untuk keperluan pribadi maupun komersial, tetaplah menyertakan atribusi.
 
 ---
 
-## 🙌 Kredit
+##  Kredit
 
 * [LangChain](https://python.langchain.com/)
 * [ChromaDB](https://www.trychroma.com/)
@@ -209,7 +209,7 @@ MIT — bebas digunakan untuk keperluan pribadi maupun komersial, tetaplah menye
 
 ---
 
-## 🔍 Catatan Teknis (Opsional)
+##  Catatan Teknis (Opsional)
 
 * **normalize_embeddings=True** penting untuk stabilitas kesamaan kosinus pada BGE.
 * `ConversationalRetrievalChain` memanfaatkan `chat_history` (list pasangan Q–A) agar konteks percakapan berlanjut.
@@ -217,4 +217,4 @@ MIT — bebas digunakan untuk keperluan pribadi maupun komersial, tetaplah menye
 
 ---
 
-Selamat mencoba! Kalau mau, saya bisa bantu **Dockerfile/Compose** atau **mode CLI non-interaktif** untuk integrasi dengan aplikasi Anda.
+
