@@ -20,13 +20,14 @@ Proyek ini memuat file teks, memotongnya jadi potongan (chunks), membuat **embed
 ```mermaid
 flowchart TD
     A["File teks: docs/smartcity.txt"] --> B["TextLoader"]
-    B --> C["RecursiveCharacterTextSplitter<br/>(chunk_size=1000, overlap=300)"]
+    B --> C["RecursiveCharacterTextSplitter (chunk_size=1000, overlap=300)"]
     C --> D["HuggingFace BGE Embeddings"]
     D --> E["Chroma Vector Store (persist)"]
-    F["Ollama LLM: gemma3:12b] --> G["ConversationalRetrievalChain"]
+    F["Ollama LLM: gemma3:12b"] --> G["ConversationalRetrievalChain"]
     E --> G
-    H[User Question + Chat History] --> G
+    H["User Question + Chat History"] --> G
     G --> I["Jawaban berbasis dokumen"]
+
 ```
 
 ---
