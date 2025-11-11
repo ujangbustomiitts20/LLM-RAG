@@ -1,21 +1,21 @@
-# 📚 RAG Chat – LangChain + Chroma + BGE + Ollama (Gemma 3)
+# RAG Chat – LangChain + Chroma + BGE + Ollama (Gemma 3)
 
 Build a **Retrieval-Augmented Generation (RAG)** chatbot that only answers based on the contents of your local document.
 This project loads a text file, splits it into chunks, creates **embeddings** using **BGE**, stores them in **Chroma**, and performs Q&A using a **local LLM via Ollama** (example: `gemma3:12b`).
 
 ---
 
-## ✨ Features
+## Features
 
-* 🔎 **Conversational Retrieval**: maintains chat history for contextual responses.
-* 🧠 **Fact-based answers**: responses are strictly grounded in the document (no hallucinations).
-* 💾 **Persistent storage**: embeddings saved in `./chroma_db`.
-* 🧩 **Modular setup**: easily swap embeddings or LLM models.
-* 🧪 **Simple to run**: one Python file, ready for Q&A.
+*  **Conversational Retrieval**: maintains chat history for contextual responses.
+*  **Fact-based answers**: responses are strictly grounded in the document (no hallucinations).
+*  **Persistent storage**: embeddings saved in `./chroma_db`.
+*  **Modular setup**: easily swap embeddings or LLM models.
+*  **Simple to run**: one Python file, ready for Q&A.
 
 ---
 
-## 🧱 Architecture Overview
+##  Architecture Overview
 
 ```mermaid
 flowchart TD
@@ -32,7 +32,7 @@ flowchart TD
 
 ---
 
-## 📂 Recommended Folder Structure
+##  Recommended Folder Structure
 
 ```
 .
@@ -47,7 +47,7 @@ flowchart TD
 
 ---
 
-## ✅ Requirements
+##  Requirements
 
 1. **Python 3.10+**
 
@@ -83,7 +83,7 @@ flowchart TD
 ---
 
 
-## ▶️ How to Run
+##  How to Run
 
 1. Make sure **Ollama** is active and the model is ready.
 2. Ensure `docs/smartcity.txt` is present.
@@ -103,9 +103,9 @@ Type `exit` to quit.
 
 ---
 
-## 🔄 Changing Models
+##  Changing Models
 
-### 🧠 Changing the LLM (Ollama)
+###  Changing the LLM (Ollama)
 
 ```python
 llm = OllamaLLM(model="gemma3:12b")
@@ -123,7 +123,7 @@ Make sure to pull first:
 ollama pull llama3.1:8b-instruct
 ```
 
-### 🔤 Changing the Embedding Model
+###  Changing the Embedding Model
 
 ```python
 model_name="BAAI/bge-small-en-v1.5"
@@ -143,7 +143,7 @@ rm -rf chroma_db
 
 ---
 
-## 🧠 Best Practices
+##  Best Practices
 
 * **Clean your documents**: remove repeated headers, footers, and artifacts.
 * **Tune chunk sizes** for balance between context and performance.
@@ -151,7 +151,7 @@ rm -rf chroma_db
 
 ---
 
-## ❓ FAQ
+##  FAQ
 
 **Q: The model gives irrelevant or empty answers.**
 A:
@@ -177,7 +177,7 @@ rm -rf chroma_db
 
 ---
 
-## 🧪 Example Prompts
+##  Example Prompts
 
 * “List the smart city pillars mentioned in the document.”
 * “What are the recommended data architecture components?”
@@ -185,13 +185,13 @@ rm -rf chroma_db
 
 ---
 
-## 📜 License
+##  License
 
 MIT License — free for personal and commercial use (please retain attribution).
 
 ---
 
-## 🙌 Credits
+##  Credits
 
 * [LangChain](https://python.langchain.com/)
 * [ChromaDB](https://www.trychroma.com/)
