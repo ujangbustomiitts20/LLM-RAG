@@ -208,4 +208,3 @@ MIT License — free for personal and commercial use (please retain attribution)
 
 ---
 
-Would you like me to add a **Dockerfile + docker-compose.yml** section to make it deployable easily (e.g., for your local AI workspace or GitHub repo)?
